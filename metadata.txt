@@ -9,7 +9,6 @@ description=It allows to convert any GIS vector format towards the .shp only
 version=1.6
 author=Francois THEVAND
 email=francois.thevand@gmail.com
-license=LICENSE.txt
 
 about=It allows to convert any GIS vector format towards the .shp only. You may also apply a new projection. You can now use qgz files and integrate rasters into your package.
 
