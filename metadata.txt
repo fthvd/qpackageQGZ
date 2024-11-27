@@ -1,31 +1,42 @@
-# This file contains metadata for your plugin.
+# This file contains metadata for your plugin. Since
+# version 2.0 of QGIS this is the proper way to supply
+# information about a plugin. The old method of
+# embedding metadata in __init__.py will
+# is no longer supported since version 2.0.
 
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=QPackage
+name=QPackageQGZ
 qgisMinimumVersion=3.0
-description=It allows to convert any GIS vector format towards the .shp only
-version=1.6
+description=QpackageQGZ is a tool to save both your QGIS project and data contained in the project to a new directory.
+version=3.7
 author=Francois THEVAND
 email=francois.thevand@gmail.com
 
-about=It allows to convert any GIS vector format towards the .shp only. You may also apply a new projection. You can now use qgz files and integrate rasters into your package.
+about=It allows you to convert any GIS vector format to a folder of your choice. You can now directly use qgz files and integrate rasters into your package. All svg symbols used in the base project will be transferred, all joins and definition files will be transferred too, for optimal autonomous operation of the project transferred to any support, including for the QField application. The translations provided are: Spanish, Portuguese, Russian, Italian, German, Polish and French. Enjoy!
 
-tracker=https://github.com/fthvd/qpackageQGZ/issues
-repository=https://github.com/fthvd/qpackageQGZ
 # End of mandatory metadata
 
 # Recommended items:
 
-hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=
+changelog=3.7 Intégration de la copie des bases de données sqlite et gpkg, prise en compte de la symbologie raster et police
+		  3.6 Correction d'un bug lié à l'API GDAL de Qgis 3.38
+		  3.5 Simplification du code, perfectionnement du fonctionnement, de l'interface et de la traduction. Accord parfait avec Qfield (le projét empaqueté est directement transférable). Tous le fichiers annexes tels que les vrt, les formulaires personnalisés ui, les symboles SVG, les macros d'édition Python sont pris en compte si présents dans le projet initial. Ajout des traductions Italien et Polonais 
+		  3.0 Correction des bugs de la 2.2.2, prise en compte complète des jointures avec fichiers externes, de la symbologie personnalisée svg et des formulaires personnalisés ui. Nouvelle icône 
+		  2.2.2 Détection automatique du format des fichiers vectoriels à copier
+		  2.2.1 Ajout de la traduction Allemand
+		  2.2 Bugs bloquants de la version 2.1 corrigés, version provisoire en attente de compléments. 
+		  2.1 version beuguée
+		  2.0 Affinage du code, adaptation complète à la traduction, copie de la symbologie svg, des formulaires personnalisés .ui et des éventuelles macro .py, correction des chemins référençant ces fichiers dans les propriétés des couches, copie des éventuels fichiers liés csv ou autres, ajout des traductions Espagnol, Portugais et Russe.
 
 # Tags are comma separated with spaces allowed
 tags=python
-
-homepage=https://github.com/fthvd/QPackage
+license=GPLv3
+homepage=https://github.com/fthvd/
+tracker=https://github.com/fthvd/QPackage/issues
+repository=https://github.com/fthvd/QPackage
 category=Plugins
 icon=icon.png
 # experimental flag
@@ -33,15 +44,3 @@ experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
-
-# Since QGIS 3.8, a comma separated list of plugins to be installed
-# (or upgraded) can be specified.
-# Check the documentation for more information.
-# plugin_dependencies=
-
-Category of the plugin: Raster, Vector, Database or Web
-# category=
-
-# If the plugin can run on QGIS Server.
-server=False
-

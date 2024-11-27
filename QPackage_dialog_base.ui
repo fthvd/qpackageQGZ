@@ -72,10 +72,10 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLineEdit" name="_repertoire"/>
+        <widget class="QLineEdit" name="_directory"/>
        </item>
        <item>
-        <widget class="QPushButton" name="_repertoire_boutton">
+        <widget class="QPushButton" name="_directory_button">
          <property name="text">
           <string>Destination folder</string>
          </property>
@@ -134,17 +134,10 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Choose the CRS : </string>
+          <string>CRS of project is </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="_listeprojections">
-         <property name="editable">
-          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -217,7 +210,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>_repertoire_boutton</sender>
+   <sender>_directory_button</sender>
    <signal>clicked()</signal>
    <receiver>QPackageDialogBase</receiver>
    <slot>chercherRepertoire()</slot>
